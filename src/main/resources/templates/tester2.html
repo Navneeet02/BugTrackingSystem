@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+	<title>Tester Page</title>
+	<style>
+
+.Main {
+  background-color:#229954 ;
+  color:#F4D03F ;
+  margin: 20px;
+  padding: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #717E5D;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #CF2A4F  ;
+}
+</style>
+</head>
+<body>
+<table>  
+        <tr>  
+            <td><h4>User Name: </h4></td>  
+            <td><h4 th:text="${Tester.testername}"></h4></td>  
+        </tr>  
+        <tr>  
+            <td><h4>City: </h4></td>  
+            <td><h4 th:text="${Tester.testeraddress}"></h4></td>  
+        </tr>  
+    </table>
+<h1><center>Add Data</center></h1>
+<ul>
+  <li><a href="Request?mainpage=Main">Main Page</a></li>
+  <li><a href="TesterRequest?page=bugassingn">Assign developer to solve bug </a></li>
+  <li><a href="TesterRequest?page=findbugtester">Find bugs</a></li>
+</ul>
+</body>
+</html>
